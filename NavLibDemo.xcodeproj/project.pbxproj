@@ -10,7 +10,8 @@
 		C90E323A2D81BB80002DC32F /* NavLibSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C90E32392D81BB80002DC32F /* NavLibSwift */; };
 		C90E32452D81BBAE002DC32F /* 3DconnexionNavlib.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C90E32442D81BBAE002DC32F /* 3DconnexionNavlib.framework */; };
 		C90E32462D81BBAE002DC32F /* 3DconnexionNavlib.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C90E32442D81BBAE002DC32F /* 3DconnexionNavlib.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C90E329F2D8238BA002DC32F /* NavLibSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C90E329E2D8238BA002DC32F /* NavLibSwift */; };
+		C90E32DF2D82FDC9002DC32F /* NavLibSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C90E32DE2D82FDC9002DC32F /* NavLibSwift */; };
+		C90E33D42D848218002DC32F /* NavLibSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C90E33D32D848218002DC32F /* NavLibSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,7 +46,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C90E329F2D8238BA002DC32F /* NavLibSwift in Frameworks */,
+				C90E33D42D848218002DC32F /* NavLibSwift in Frameworks */,
+				C90E32DF2D82FDC9002DC32F /* NavLibSwift in Frameworks */,
 				C90E323A2D81BB80002DC32F /* NavLibSwift in Frameworks */,
 				C90E32452D81BBAE002DC32F /* 3DconnexionNavlib.framework in Frameworks */,
 			);
@@ -101,7 +103,8 @@
 			name = NavLibDemo;
 			packageProductDependencies = (
 				C90E32392D81BB80002DC32F /* NavLibSwift */,
-				C90E329E2D8238BA002DC32F /* NavLibSwift */,
+				C90E32DE2D82FDC9002DC32F /* NavLibSwift */,
+				C90E33D32D848218002DC32F /* NavLibSwift */,
 			);
 			productName = NavLibDemo;
 			productReference = C90E32092D81B9B6002DC32F /* NavLibDemo.app */;
@@ -132,7 +135,7 @@
 			mainGroup = C90E32002D81B9B6002DC32F;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				C90E329D2D8238BA002DC32F /* XCRemoteSwiftPackageReference "NavLibSwift" */,
+				C90E33D22D848218002DC32F /* XCRemoteSwiftPackageReference "NavLibSwift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C90E320A2D81B9B6002DC32F /* Products */;
@@ -375,9 +378,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C90E329D2D8238BA002DC32F /* XCRemoteSwiftPackageReference "NavLibSwift" */ = {
+		C90E33D22D848218002DC32F /* XCRemoteSwiftPackageReference "NavLibSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/tomasf/NavLibSwift.git";
+			repositoryURL = "https://github.com/tomasf/NavLibSwift";
 			requirement = {
 				branch = main;
 				kind = branch;
@@ -390,9 +393,13 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = NavLibSwift;
 		};
-		C90E329E2D8238BA002DC32F /* NavLibSwift */ = {
+		C90E32DE2D82FDC9002DC32F /* NavLibSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C90E329D2D8238BA002DC32F /* XCRemoteSwiftPackageReference "NavLibSwift" */;
+			productName = NavLibSwift;
+		};
+		C90E33D32D848218002DC32F /* NavLibSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C90E33D22D848218002DC32F /* XCRemoteSwiftPackageReference "NavLibSwift" */;
 			productName = NavLibSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
