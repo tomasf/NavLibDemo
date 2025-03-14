@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/tomasf/NavLibSwift",
       "state" : {
-        "branch" : "main",
-        "revision" : "28a41fb0e13feef4ecd3c04fb1e80266610eeb37"
+        "revision" : "28a41fb0e13feef4ecd3c04fb1e80266610eeb37",
+        "version" : "1.0.0"
       }
     }
   ],
