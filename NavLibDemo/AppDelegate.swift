@@ -7,7 +7,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet var window: NSWindow!
     @IBOutlet var sceneView: SCNView!
 
-    private let session = NavLibSession()
+    private let session = NavLibSession<SCNVector3>()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let sceneView = self.sceneView!
@@ -29,14 +29,12 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 }
 
 extension AppDelegate: NavLibStateProvider {
-    var modelBoundingBox: any BoundingBox {
-        Bounds(sceneView.scene!.rootNode.boundingBox)
+    var modelBoundingBox: (min: SCNVector3, max: SCNVector3) {
+        sceneView.scene!.rootNode.boundingBox
     }
 
-    var cameraTransform: any Transform {
-        get {
-            sceneView.pointOfView!.presentation.transform
-        }
+    var cameraTransform: Transform {
+        get { Transform(scnMatrix: sceneView.pointOfView!.presentation.transform) }
         set {
             guard let pov = sceneView.pointOfView else { return }
             SCNTransaction.begin()
@@ -46,4 +44,3 @@ extension AppDelegate: NavLibStateProvider {
         }
     }
 }
-
